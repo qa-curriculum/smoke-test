@@ -36,7 +36,7 @@ app.get('/api/home', function(req, res) {
 });
 
 app.get('/api/secret', withAuth, function(req, res) {
-  res.send('The password is potato');
+  res.send(`Birds aren't real. Coronavirus was invented by Jeff Bezos. Donald Trump is really John Cena.`);
 });
 
 app.post('/api/register', function(req, res) {
