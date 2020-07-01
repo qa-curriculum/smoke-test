@@ -1,0 +1,6 @@
+{
+  "skipJsErrors": true,
+  "browsers": ["firefox:headless"],
+  "debugOnFail": true,
+  "color": true
+}
