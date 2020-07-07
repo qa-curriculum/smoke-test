@@ -12,18 +12,23 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.2.0"
+    "react-scripts": "^3.2.0",
+    "testcafe": "^1.8.7",
+    "testcafe-reporter-cucumber-json": "^6.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "test-cafe": "./node_modules/.bin/testcafe ./tests/ --reporter spec,cucumber-json:reports/report.json --reporter-app-name='Smoke-Test' --reporter-app-version=1.0.0 --reporter-json-folder='reports/'",
+    "report": "node report-generator.js",
     "eject": "react-scripts eject",
     "server": "node server.js",
     "server-dev": "nodemon server.js"
   },
   "proxy": "http://localhost:8080",
   "devDependencies": {
+    "multiple-cucumber-html-reporter": "^1.16.3",
     "nodemon": "^2.0.0"
   },
   "browserslist": [
