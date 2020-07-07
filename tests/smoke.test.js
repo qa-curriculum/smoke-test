@@ -82,6 +82,7 @@ test('After logged in, when you click on secret, it should navigate you the /sec
       .expect(h1).ok()
 
       .click(SecretButton)
+      .expect(getLocation()).eql('http://localhost:3000/secret')
       .expect(SecretText.textContent).eql("Birds aren't real. Coronavirus was invented by Jeff Bezos. Donald Trump is really John Cena.");
   console.timeEnd("Time to finish test case 4 ");
 });
